@@ -49,7 +49,7 @@
 }
 
 
-#isCorrect {
+.Correct {
     color: #00d43f;
     border-color: #00d43f;
     border-width: 5px;
@@ -59,7 +59,7 @@
   
   }
 
-#noCorrect {
+.noCorrect {
     color: #eb0909;
     border-color: #eb0909;
     border-width: 5px;

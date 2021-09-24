@@ -1,5 +1,5 @@
 <div class="d-flex min-vh-100" >
-  <div class="container pt-5 text-center" *ngIf="questionsArray">
+  <div class="container pt-5 text-center" *ngIf="questionsArray.length !== 0">
     <div class="row">
       <div class="col pb-5">
         <h3>Question N°: {{ acc }} / {{ questionsNumMax }} | Points: {{ points }}</h3>
@@ -12,15 +12,19 @@
       </div>
     </div>
 
+    <!-- Questions -->
+
     <div class="row-1">
       
       <div class="col pb-5" >
         <button
           type="button"
           class="large-button btn btn-primary"
-          (click)="onAnswer(questionsArray[0].correct_answer)"
+          (click)="onCorrectAnswer(arrayAux[0])"
+          [ngClass]="{'Correct': stringValidatorCorrectAnswer === arrayAux[0],
+          'noCorrect': false }"
         >
-          {{questionsArray[0].correct_answer}}
+          {{arrayAux[0]}}
         </button>
       </div>
 
@@ -28,9 +32,11 @@
         <button
           type="button"
           class="large-button btn btn-primary"
-          (click)="onAnswer(questionsArray[0].incorrect_answers[0])"
+          (click)="onCorrectAnswer(arrayAux[1])"
+          [ngClass]="{'Correct': stringValidatorCorrectAnswer === arrayAux[1],
+          'noCorrect': false }"
         >
-          {{questionsArray[0].incorrect_answers[0]}}
+          {{arrayAux[1]}}
         </button>
       </div>
 
@@ -38,9 +44,11 @@
         <button
           type="button"
           class="large-button btn btn-primary"
-          (click)="onAnswer(questionsArray[0].incorrect_answers[1])"
+          (click)="onCorrectAnswer(arrayAux[2])"
+          [ngClass]="{'Correct': stringValidatorCorrectAnswer === arrayAux[2],
+          'noCorrect': false }"
         >
-            {{questionsArray[0].incorrect_answers[1]}}
+            {{arrayAux[2]}}
         </button>
       </div>
 
@@ -48,13 +56,15 @@
         <button
           type="button"
           class="large-button btn btn-primary"
-          (click)="onAnswer(questionsArray[0].incorrect_answers[2])"
+          (click)="onCorrectAnswer(arrayAux[3])"
+          [ngClass]="{'Correct': stringValidatorCorrectAnswer === arrayAux[3],
+          'noCorrect': false }"
         >
-            {{questionsArray[0].incorrect_answers[2]}}
+            {{arrayAux[3]}}
         </button>
       </div>
 
-      <div class="col pb-5">
+<!--       <div class="col pb-5">
         <button
           type="button"
           disabled
@@ -63,7 +73,7 @@
           Next
         </button>
       </div>
-
+ -->
      
 
     </div>
@@ -80,7 +90,7 @@
 
   <ng-template #modalLoser let-modal>
     <div class="modal-header">
-      <h4 class="modal-title"> Thanks for playing, in the next one you will do better, you will take  {{points}} points </h4>
+      <h4 class="modal-title"> Thanks for playing, in the next one you will do better, you will take {{points}} points </h4>
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-outline-success" (click)="modal.close()" > OK </button>
