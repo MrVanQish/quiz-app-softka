@@ -3,6 +3,8 @@ import { ResultsQuestions, Questions } from 'src/app/models/questions';
 import { QuestionsService } from 'src/app/services/questions.service';
 import { Router } from '@angular/router';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import { Score } from 'src/app/models/score';
+import { DbService } from 'src/app/services/db.service';
 
 @Component({
   selector: 'app-quiz',
@@ -16,29 +18,32 @@ export class QuizComponent implements OnInit {
   public questionsNumMax = 0;
   public points = 0;
   public arrayAux: Array<String> = [];
-  public classCorrectOrNotAsnwer: String = '';
+ /*  public classCorrectOrNotAsnwer: String = '';
   public stringValidatorCorrectAnswer: any;
-  public stringValidatorIncorrectAnswer: any;
+  public stringValidatorIncorrectAnswer: any; */
 
+  public scores: Array<Score> = [];
 
-  constructor(private questions: QuestionsService, private router: Router, public modal: NgbModal) {}
+  constructor(
+    private questions: QuestionsService,
+    private router: Router,
+    public modal: NgbModal,
+    private dbService: DbService
+  ) {}
 
   ngOnInit(): void {
     this.questions
       .getQuestions()
-      .subscribe((x) =>  ( 
-        this.questionsArray = x.results, 
-        this.questionsNumMax = this.questionsArray.length,
-        this.answersRandom()  
-        
+      .subscribe(
+        (x) => (
+          (this.questionsArray = x.results),
+          (this.questionsNumMax = this.questionsArray.length),
+          this.answersRandom()
         )
-        
-        );
-
-        
+      );
   }
 
-/*   public onNextQuestion() {
+  /*   public onNextQuestion() {
     if (this.acc === this.questionsArray?.length) {
       console.log('falta agregar funcionalidad');
     } else {
@@ -48,87 +53,76 @@ export class QuizComponent implements OnInit {
     console.log(this.questionsArray)
   }  */
 
-  public onCorrectAnswer(answer : any){
+  public onCorrectAnswer(e: any, answer: any) {
+    if (answer === this.questionsArray[0].correct_answer) {
+      setTimeout(() => {
+        e.target.checked = false;
 
-    
-      if(answer === this.questionsArray[0].correct_answer){
+        this.questionsArray.shift();
 
-        this.stringValidatorCorrectAnswer = answer;
-        
-        
-          setTimeout(() => {
+        if (this.questionsArray !== []) {
+          this.answersRandom();
 
-            this.questionsArray.shift();
+          this.acc++;
 
-          if (this.questionsArray !== [] ){
-              this.answersRandom();
+          this.points += 10;
 
-              this.acc++;
+          this.acc === this.questionsNumMax + 1
+            ? this.router.navigate(['/home'])
+            : console.log(this.questionsArray);
+        } else {
+          const playerInfo = new Score(this.points, 'jacobo', this.points / 10);
 
-              this.points += 10;
+          this.scores.push(playerInfo);
 
-              this.acc === this.questionsNumMax + 1 ? this.router.navigate(['/home']) : console.log(this.questionsArray)
-            }else{
+          console.log(this.scores);
 
-              this.router.navigate(['/home'])
-
-            }
-
-          }, 700);
-      }else{
-
-        this.stringValidatorIncorrectAnswer = 'no';
-
-        setTimeout(() => {
           this.router.navigate(['/home']);
-        }, 700);
-        
-      }
+        }
+      }, 700);
+    } else {
 
-      
-   
-      
-      
+      const playerInfo = new Score(this.points, 'jacobo', this.points / 10);
+
+      this.dbService.addScore(playerInfo).subscribe();
+
+      console.log(this.scores);
+
+      setTimeout(() => {
+        this.router.navigate(['/home']);
+      }, 700);
+    }
   }
 
-  public answersRandom(){
-    
-    const answerErrors = this.questionsArray[0].incorrect_answers
-    const answerCorrect = String(this.questionsArray[0].correct_answer)
+  public answersRandom() {
+    const answerErrors = this.questionsArray[0].incorrect_answers;
+    const answerCorrect = String(this.questionsArray[0].correct_answer);
 
-    answerErrors.push(answerCorrect)
+    answerErrors.push(answerCorrect);
 
     this.arrayAux = this.shuffle(answerErrors);
 
-    console.log(answerCorrect)
+    console.log(answerCorrect);
 
-    console.log(this.arrayAux)
-
+    console.log(this.arrayAux);
   }
 
   public shuffle(array: any) {
-    let currentIndex = array.length,  randomIndex;
-  
+    let currentIndex = array.length, randomIndex;
+
     // While there remain elements to shuffle...
     while (currentIndex != 0) {
-  
       // Pick a remaining element...
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex--;
-  
+
       // And swap it with the current element.
       [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex], array[currentIndex]];
+        array[randomIndex],
+        array[currentIndex],
+      ];
     }
-  
+
     return array;
   }
-  
-  
-
-
-
-  
-
-
 }

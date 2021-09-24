@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { QuizComponent } from './components/quiz/quiz.component';
 import { ScoreComponent } from './components/score/score.component';
 import { QuestionsService } from './services/questions.service';
+import { DbService } from './services/db.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -21,9 +22,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
   ],
-  providers: [QuestionsService],
-  bootstrap: [AppComponent]
+    providers: [QuestionsService, DbService],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

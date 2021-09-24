@@ -1,4 +1,4 @@
-<div class="d-flex min-vh-100" >
+<!-- <div class="d-flex min-vh-100" >
   <div class="container pt-5 text-center" *ngIf="questionsArray.length !== 0">
     <div class="row">
       <div class="col pb-5">
@@ -11,8 +11,6 @@
         <p>{{questionsArray[0].question}}</p>
       </div>
     </div>
-
-    <!-- Questions -->
 
     <div class="row-1">
       
@@ -63,17 +61,6 @@
             {{arrayAux[3]}}
         </button>
       </div>
-
-<!--       <div class="col pb-5">
-        <button
-          type="button"
-          disabled
-          class="large-button btn btn-secondary"
-        >
-          Next
-        </button>
-      </div>
- -->
      
 
     </div>
@@ -97,9 +84,60 @@
     </div>
   </ng-template>
 
-<!--   <button (click)="modal.open(modalWinner)">xd</button> -->
 
-  
-  
+</div>
+ -->
+ <div class="container d-flex justify-content-center min-vh-100" *ngIf="questionsArray.length !== 0" > 
+  <div class="row d-flex justify-content-center align-items-center"><br><br>
+      <div class="col-sm-8 col-sm-offset-2">
 
+        <h3 class="text-center">Question N°: {{ acc }} / {{ questionsNumMax }} | Points: {{ points }}</h3>
+        <br>
+        <br>
+          
+          <div class="loader">
+
+            
+            
+
+              <div id="quiz">
+                  
+                  <div class="question">
+                      <h3><span class="label label-warning" id="qid"></span>
+                          <span id="question"> {{questionsArray[0].question}} </span>
+                      </h3>
+                  </div>
+                  
+                  <ul>
+                    <li>
+                      <input (change)="onCorrectAnswer($event, arrayAux[0] )" type="radio" id="f-option" name="selector" value="1">
+                          <label  for="f-option" class="element-animation">{{arrayAux[0]}}</label>
+                          <div class="check"><div class="inside"></div></div>
+                    </li>
+                    
+                    <li>
+                      <input (click)="onCorrectAnswer($event, arrayAux[1])" type="radio" id="s-option" name="selector" value="2">
+                      <label  for="s-option" class="element-animation">{{arrayAux[1]}}</label>
+                      <div class="check"><div class="inside"></div></div>
+                    </li>
+                    
+                    <li>
+                      <input (click)="onCorrectAnswer($event, arrayAux[2])" type="radio" id="t-option" name="selector" value="3">
+                      <label for="t-option" class="element-animation">{{arrayAux[2]}}</label>
+                      <div class="check"><div class="inside"></div></div>
+                    </li>
+
+                    <li class="finalQ">
+                      <input (click)="onCorrectAnswer($event, arrayAux[3])" type="radio" id="z-option" name="selector" value="4">
+                      <label  for="z-option" class="element-animation"> {{arrayAux[3]}} </label>
+                      <div class="check"><div class="inside"></div></div>
+                    </li>
+
+                  </ul>
+
+              </div>
+          </div>
+          
+      </div>
+  </div>
 </div>

@@ -1,1 +1,5 @@
-<p>score works!</p>
+<ul>
+    <li *ngFor="let item of scores"> Nickname: {{ item.nickname }} Points: {{ item.points }} 
+        Correct answers: {{item.correctAsnwers}} Hit percentage: {{item.hitPercentage}}
+    </li>
+</ul>

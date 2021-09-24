@@ -1,5 +1,9 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Score } from 'src/app/models/score';
+import { Observable } from 'rxjs';
+import { DbService } from 'src/app/services/db.service';
+
 
 @Component({
   selector: 'app-score',
@@ -8,9 +12,16 @@ import { Score } from 'src/app/models/score';
 })
 export class ScoreComponent implements OnInit {
 
-  constructor() { }
+  public scores: Array<Score> = [];
 
-  ngOnInit(): void {
+  constructor(private dbService: DbService) {
   }
+
+  
+  ngOnInit(): void {
+    this.dbService.getScores().subscribe(data => this.scores = data);
+  }
+
+  
 
 }

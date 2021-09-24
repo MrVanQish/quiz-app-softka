@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "quiz-app-softka-back": {
+      "hosting": {
+        "quiz-app-softka": [
+          "quiz-app-softka-back"
+        ]
+      }
+    }
+  }
+}
