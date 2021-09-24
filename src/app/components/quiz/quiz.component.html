@@ -1,0 +1,95 @@
+<div class="d-flex min-vh-100" >
+  <div class="container pt-5 text-center" *ngIf="questionsArray">
+    <div class="row">
+      <div class="col pb-5">
+        <h3>Question N°: {{ acc }} / {{ questionsNumMax }} | Points: {{ points }}</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col pb-5">
+        <p>{{questionsArray[0].question}}</p>
+      </div>
+    </div>
+
+    <div class="row-1">
+      
+      <div class="col pb-5" >
+        <button
+          type="button"
+          class="large-button btn btn-primary"
+          (click)="onAnswer(questionsArray[0].correct_answer)"
+        >
+          {{questionsArray[0].correct_answer}}
+        </button>
+      </div>
+
+      <div class="col pb-5">
+        <button
+          type="button"
+          class="large-button btn btn-primary"
+          (click)="onAnswer(questionsArray[0].incorrect_answers[0])"
+        >
+          {{questionsArray[0].incorrect_answers[0]}}
+        </button>
+      </div>
+
+      <div class="col pb-5">
+        <button
+          type="button"
+          class="large-button btn btn-primary"
+          (click)="onAnswer(questionsArray[0].incorrect_answers[1])"
+        >
+            {{questionsArray[0].incorrect_answers[1]}}
+        </button>
+      </div>
+
+      <div class="col pb-5">
+        <button
+          type="button"
+          class="large-button btn btn-primary"
+          (click)="onAnswer(questionsArray[0].incorrect_answers[2])"
+        >
+            {{questionsArray[0].incorrect_answers[2]}}
+        </button>
+      </div>
+
+      <div class="col pb-5">
+        <button
+          type="button"
+          disabled
+          class="large-button btn btn-secondary"
+        >
+          Next
+        </button>
+      </div>
+
+     
+
+    </div>
+  </div>
+
+  <ng-template #modalWinner let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title"> Congratulations, you take home {{points}} SUPER POINTS! </h4>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-success" (click)="modal.close()" > OK </button>
+    </div>
+  </ng-template>
+
+  <ng-template #modalLoser let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title"> Thanks for playing, in the next one you will do better, you will take  {{points}} points </h4>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-success" (click)="modal.close()" > OK </button>
+    </div>
+  </ng-template>
+
+<!--   <button (click)="modal.open(modalWinner)">xd</button> -->
+
+  
+  
+
+</div>

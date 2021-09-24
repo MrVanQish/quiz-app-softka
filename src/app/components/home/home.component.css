@@ -1,0 +1,10 @@
+.large-button{
+    min-width: 170px;
+    max-width: 170px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.container, .btn{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
