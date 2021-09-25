@@ -90,6 +90,13 @@
       "correctAsnwers": 1,
       "hitPercentage": "20%",
       "id": 13
+    },
+    {
+      "points": 0,
+      "nickname": "xd",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 14
     }
   ]
 }

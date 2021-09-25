@@ -1,9 +1,7 @@
-import { set } from 'firebase/database';
 import { Component, OnInit } from '@angular/core';
 import { ResultsQuestions, Questions } from 'src/app/models/questions';
 import { QuestionsService } from 'src/app/services/questions.service';
 import { Router } from '@angular/router';
-import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { Score } from 'src/app/models/score';
 import { DbService } from 'src/app/services/db.service';
 
@@ -24,7 +22,6 @@ export class QuizComponent implements OnInit {
   constructor(
     private questions: QuestionsService,
     private router: Router,
-    public modal: NgbModal,
     private dbService: DbService
   ) {}
 
@@ -40,16 +37,6 @@ export class QuizComponent implements OnInit {
       );
   }
 
-  /*   public onNextQuestion() {
-    if (this.acc === this.questionsArray?.length) {
-      console.log('falta agregar funcionalidad');
-    } else {
-      this.acc++;
-    }
-
-    console.log(this.questionsArray)
-  }  */
-
   public onCorrectAnswer(e: any, answer: any) {
     if (answer === this.questionsArray[0].correct_answer) {
       setTimeout(() => {
@@ -63,55 +50,39 @@ export class QuizComponent implements OnInit {
           this.acc++;
 
           this.points += 10;
-
-  /*           this.acc === this.questionsNumMax + 1
-            ? this.router.navigate(['/home'])
-            : console.log(this.questionsArray); */
-
-
         } else {
-
           this.points += 10;
-/*           this.acc === this.questionsNumMax + 1; */
 
-          alert('WOW! You won')
+          alert('WOW! You won');
 
-          const nickname = prompt("Please enter your nickname", "");
+          const nickname = prompt('Please enter your nickname', '');
 
           this.saveDataWinnerOrLoser(String(nickname));
 
-          this.router.navigate(['/home'])
-
-    /*       setTimeout(() => {
-            this.router.navigate(['/home']);
-          }, 7000); */
+          this.router.navigate(['/home']);
         }
       }, 700);
     } else {
-
       setTimeout(() => {
+        alert('WRONGGGGG! Has perdido');
 
-        alert('WRONGGGGG! Has perdido')
-
-        const nickname = prompt("Please enter your nickname", "");
+        const nickname = prompt('Please enter your nickname', '');
 
         this.saveDataWinnerOrLoser(String(nickname));
 
         this.router.navigate(['/home']);
-
       }, 500);
-
-      
-
-      
     }
   }
 
-  public leaveAndSaveProgress(){
+  public leaveAndSaveProgress() {
+    const nickname = prompt('Please enter your nickname', '');
 
-    const nickname = prompt("Please enter your nickname", "");
-
-    const playerInfo = new Score(this.points, String(nickname), this.points / 10);
+    const playerInfo = new Score(
+      this.points,
+      String(nickname),
+      this.points / 10
+    );
 
     this.dbService.addScore(playerInfo).subscribe();
   }
@@ -135,24 +106,16 @@ export class QuizComponent implements OnInit {
     answerErrors.push(answerCorrect);
 
     this.arrayAux = this.shuffle(answerErrors);
-
-    console.log(answerCorrect);
-    console.log(this.questionsArray);
-
-    /*   console.log(this.arrayAux); */
   }
 
   public shuffle(array: any) {
     let currentIndex = array.length,
       randomIndex;
 
-    // While there remain elements to shuffle...
     while (currentIndex != 0) {
-      // Pick a remaining element...
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex--;
 
-      // And swap it with the current element.
       [array[currentIndex], array[randomIndex]] = [
         array[randomIndex],
         array[currentIndex],
