@@ -1,11 +1,19 @@
-<div class="container-color" *ngIf="screenNickname === false">
+<div class="container-color" *ngIf="true">
   <div class="container container-color d-flex justify-content-center min-vh-100"> 
-    <div class="row shadowd-flex justify-content-center align-items-center" *ngIf="questionsArray.length !== 0 && screenNickname === false"><br><br>
+    <div class="row shadowd-flex justify-content-center align-items-center" *ngIf="questionsArray.length !== 0"><br><br>
         <div class="col-sm-8 col-sm-offset-2 ">
 
+
+          <button
+          type="button"
+          (click)="leaveAndSaveProgress()"
+          [routerLink]="'/home'"
+          class="large-button btn btn-play">
+              <span style="color: white;" >Leave</span>  
+          </button>
+
           <h3 class="text-center">Question N°: {{ acc }} / {{ questionsNumMax }} | Points: {{ points }}</h3>
-          <br>
-          <br>
+         
             
             <div class="loader">
 
@@ -16,6 +24,8 @@
                             <span id="question"> {{questionsArray[0].question}} </span>
                         </h3>
                     </div>
+
+                    
                     
                     <ul>
                       <li>
@@ -42,7 +52,13 @@
                         <div class="check"><div class="inside"></div></div>
                       </li>
 
+                     
+
+
                     </ul>
+                    
+                   
+                        
 
                 </div>
             </div>
@@ -53,34 +69,6 @@
 
 </div>
 
-<div class="container-color " *ngIf="screenNickname">
-  <div class="container d-flex justify-content-center min-vh-100"  > 
-    <div class="row d-flex justify-content-center align-items-center" ><br><br>
-        <div class="col-sm-8 col-sm-offset-2">
-
-                <div id="quiz">
-                    
-                    <div class="question">
-                        <h3><span class="label label-warning" id="qid"></span>
-                            <span id="question"> Enter your nickname: </span>
-                        </h3>
-                    </div>
-                    
-                    <ul>
-                      <li class="finalQ"  style="height: 100px;">
-                            <label  for="f-option" class="element-animation">
-                              <input style="margin-right: 350px; width: 280px;" class="form-control" type="text" placeholder="Nickname">
-                            </label>
-                      </li>  
-                    </ul>
-
-                </div>
-            </div>
-            
-        </div>
-    </div>
-
-</div>
 
 
 

@@ -128,4 +128,11 @@ svg {
   height: 100%;
   }
 
-
+  .btn-play{
+    background-color: #F06543;
+    border-color: #F06543;
+    line-height: 12px;
+    width: 100px;
+    margin-top: 1px;
+    margin-right: 2px;
+}
