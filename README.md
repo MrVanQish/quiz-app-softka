@@ -22,11 +22,22 @@ A db.json file located in the path quiz-app-softka\db.json was used to persist t
 
 ## Getting Started
 
-- After installing json-server, the only thing you have to do is to execute the command in a console inside the project: 
+- You must first clone the project
+  - git clone https://github.com/MrVanQish/quiz-app-softka.git
+
+- then you must run the following command inside the project folder
+  - npm install 
+ 
+- then you must install json-server
+  - npm i json-server
+ 
+- After installing json-server, the only thing you have to do is to execute the command in a console inside the project
   - json-server --watch db.json 
   this will run the api-rest (Make sure that json-server runs in the following path http://localhost:3000)
-- finally run the angular project like this:
+
+- finally run the angular project like this
   - ng serve
+ 
 - Enjoy  
 
 
