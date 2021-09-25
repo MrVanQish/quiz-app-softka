@@ -1,3 +1,4 @@
+import { set } from 'firebase/database';
 import { Component, OnInit } from '@angular/core';
 import { ResultsQuestions, Questions } from 'src/app/models/questions';
 import { QuestionsService } from 'src/app/services/questions.service';
@@ -18,11 +19,9 @@ export class QuizComponent implements OnInit {
   public questionsNumMax = 0;
   public points = 0;
   public arrayAux: Array<String> = [];
- /*  public classCorrectOrNotAsnwer: String = '';
-  public stringValidatorCorrectAnswer: any;
-  public stringValidatorIncorrectAnswer: any; */
-
   public scores: Array<Score> = [];
+  public loading: boolean = false;
+  public screenNickname : boolean = false;
 
   constructor(
     private questions: QuestionsService,
@@ -55,12 +54,13 @@ export class QuizComponent implements OnInit {
 
   public onCorrectAnswer(e: any, answer: any) {
     if (answer === this.questionsArray[0].correct_answer) {
+      
       setTimeout(() => {
         e.target.checked = false;
 
         this.questionsArray.shift();
 
-        if (this.questionsArray !== []) {
+        if (this.questionsArray.length !== 0) {
           this.answersRandom();
 
           this.acc++;
@@ -70,29 +70,59 @@ export class QuizComponent implements OnInit {
           this.acc === this.questionsNumMax + 1
             ? this.router.navigate(['/home'])
             : console.log(this.questionsArray);
+
+           
+            console.log(this.scores);
+
         } else {
-          const playerInfo = new Score(this.points, 'jacobo', this.points / 10);
 
-          this.scores.push(playerInfo);
+          this.screenNickname = true;
 
-          console.log(this.scores);
+          this.points += 10;
+          this.acc === this.questionsNumMax + 1;
 
-          this.router.navigate(['/home']);
+          this.saveDataWinnerOrLoser('winner')
+          
+          setTimeout(() => {
+
+            this.router.navigate(['/home']);
+
+          }, 7000);
+
+          
         }
       }, 700);
     } else {
 
-      const playerInfo = new Score(this.points, 'jacobo', this.points / 10);
+      this.screenNickname = true;
 
-      this.dbService.addScore(playerInfo).subscribe();
-
-      console.log(this.scores);
+      this.saveDataWinnerOrLoser('loser')
 
       setTimeout(() => {
         this.router.navigate(['/home']);
-      }, 700);
+      }, 7000);
     }
   }
+
+  public saveDataWinnerOrLoser(name: string){
+
+    if(this.points < 50){
+
+      const playerInfo = new Score(0, name, 0);
+
+      this.dbService.addScore(playerInfo).subscribe();
+
+    }else{
+
+      const playerInfo = new Score(this.points, name, this.points / 10);
+
+      this.dbService.addScore(playerInfo).subscribe();
+
+    }
+   
+
+  }
+
 
   public answersRandom() {
     const answerErrors = this.questionsArray[0].incorrect_answers;
@@ -103,8 +133,9 @@ export class QuizComponent implements OnInit {
     this.arrayAux = this.shuffle(answerErrors);
 
     console.log(answerCorrect);
+    console.log(this.questionsArray);
 
-    console.log(this.arrayAux);
+  /*   console.log(this.arrayAux); */
   }
 
   public shuffle(array: any) {

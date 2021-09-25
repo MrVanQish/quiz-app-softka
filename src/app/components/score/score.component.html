@@ -1,5 +1,19 @@
-<ul>
-    <li *ngFor="let item of scores"> Nickname: {{ item.nickname }} Points: {{ item.points }} 
-        Correct answers: {{item.correctAsnwers}} Hit percentage: {{item.hitPercentage}}
-    </li>
-</ul>
+<div class="container-color">
+  <div class="container d-flex flex-wrap justify-content-center min-vh-100">
+        
+    <div *ngFor="let item of scores" class="card text-white mb-3 mt-5 mx-3 align-items-center" style="max-width: 18rem;">
+
+              <div class="card-header "> Information </div>
+              <div class="card-body ">
+                <h5 class="card-title text-center">{{ item.nickname }} <br> {{ item.points }} Points</h5>
+                <p class="card-text">   
+                    
+                  <span>Stadistics</span> <br>
+                  Correct answers: {{item.correctAsnwers}}
+                  <br>
+                  Hit percentage: {{item.hitPercentage}}</p>
+              </div>
+            </div>
+
+  </div>
+</div>

@@ -1,44 +1,52 @@
-<!-- <button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
 
-<button type="button" class="btn btn-link">Link</button> -->
+<div class="container-color">
 
-<div class="d-flex align-items-center min-vh-100">
-  <div class="container text-center">
-    <div class="row">
-      <div class="col pb-5">
-        <h1>Quiz App</h1>
+
+  <div class="d-flex align-items-center min-vh-100">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col pb-5">
+          <div class="bg-1">
+            <h1>QUIZ APP</h1>
+         </div>
+        </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col pb-5">
-        <button
-          type="button"
-          [routerLink]="'/quiz'"
-          class="large-button btn btn-primary"
-        >
-          Play
-        </button>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      
+      <div class="row">
+        <div class="col pb-5">
+          <button
+            type="button"
+            [routerLink]="'/quiz'"
+            class="large-button btn btn-play"
+          >
+            <span style="color: white;" >Play</span>
+            
+          </button>
+        </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col">
-        <button
-          type="button"
-          [routerLink]="'/score'"
-          class="large-button btn btn-primary"
-        >
-          Score
-        </button>
+      <div class="row">
+        <div class="col">
+          <button
+            type="button "
+            [routerLink]="'/score'"
+            class="large-button btn btn-score"
+          >
+            <span style="color: white;">Score</span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
+  
 </div>

@@ -22,6 +22,6 @@ export class ScoreComponent implements OnInit {
     this.dbService.getScores().subscribe(data => this.scores = data);
   }
 
-  
+
 
 }

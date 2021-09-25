@@ -1,143 +1,87 @@
-<!-- <div class="d-flex min-vh-100" >
-  <div class="container pt-5 text-center" *ngIf="questionsArray.length !== 0">
-    <div class="row">
-      <div class="col pb-5">
-        <h3>Question N°: {{ acc }} / {{ questionsNumMax }} | Points: {{ points }}</h3>
-      </div>
-    </div>
+<div class="container-color" *ngIf="screenNickname === false">
+  <div class="container container-color d-flex justify-content-center min-vh-100"> 
+    <div class="row shadowd-flex justify-content-center align-items-center" *ngIf="questionsArray.length !== 0 && screenNickname === false"><br><br>
+        <div class="col-sm-8 col-sm-offset-2 ">
 
-    <div class="row">
-      <div class="col pb-5">
-        <p>{{questionsArray[0].question}}</p>
-      </div>
-    </div>
+          <h3 class="text-center">Question N°: {{ acc }} / {{ questionsNumMax }} | Points: {{ points }}</h3>
+          <br>
+          <br>
+            
+            <div class="loader">
 
-    <div class="row-1">
-      
-      <div class="col pb-5" >
-        <button
-          type="button"
-          class="large-button btn btn-primary"
-          (click)="onCorrectAnswer(arrayAux[0])"
-          [ngClass]="{'Correct': stringValidatorCorrectAnswer === arrayAux[0],
-          'noCorrect': false }"
-        >
-          {{arrayAux[0]}}
-        </button>
-      </div>
+                <div id="quiz" >
+                    
+                    <div class="question">
+                        <h3><span class="label label-warning" id="qid"></span>
+                            <span id="question"> {{questionsArray[0].question}} </span>
+                        </h3>
+                    </div>
+                    
+                    <ul>
+                      <li>
+                        <input (change)="onCorrectAnswer($event, arrayAux[0] )" type="radio" id="f-option" name="selector" value="1">
+                            <label  for="f-option" class="element-animation">{{arrayAux[0]}}</label>
+                            <div class="check"><div class="inside"></div></div>
+                      </li>
+                      
+                      <li>
+                        <input (click)="onCorrectAnswer($event, arrayAux[1])" type="radio" id="s-option" name="selector" value="2">
+                        <label  for="s-option" class="element-animation">{{arrayAux[1]}}</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      
+                      <li>
+                        <input (click)="onCorrectAnswer($event, arrayAux[2])" type="radio" id="t-option" name="selector" value="3">
+                        <label for="t-option" class="element-animation">{{arrayAux[2]}}</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
 
-      <div class="col pb-5">
-        <button
-          type="button"
-          class="large-button btn btn-primary"
-          (click)="onCorrectAnswer(arrayAux[1])"
-          [ngClass]="{'Correct': stringValidatorCorrectAnswer === arrayAux[1],
-          'noCorrect': false }"
-        >
-          {{arrayAux[1]}}
-        </button>
-      </div>
+                      <li class="finalQ">
+                        <input (click)="onCorrectAnswer($event, arrayAux[3])" type="radio" id="z-option" name="selector" value="4">
+                        <label  for="z-option" class="element-animation"> {{arrayAux[3]}} </label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
 
-      <div class="col pb-5">
-        <button
-          type="button"
-          class="large-button btn btn-primary"
-          (click)="onCorrectAnswer(arrayAux[2])"
-          [ngClass]="{'Correct': stringValidatorCorrectAnswer === arrayAux[2],
-          'noCorrect': false }"
-        >
-            {{arrayAux[2]}}
-        </button>
-      </div>
+                    </ul>
 
-      <div class="col pb-5">
-        <button
-          type="button"
-          class="large-button btn btn-primary"
-          (click)="onCorrectAnswer(arrayAux[3])"
-          [ngClass]="{'Correct': stringValidatorCorrectAnswer === arrayAux[3],
-          'noCorrect': false }"
-        >
-            {{arrayAux[3]}}
-        </button>
-      </div>
-     
-
+                </div>
+            </div>
+            
+        </div>
     </div>
   </div>
 
-  <ng-template #modalWinner let-modal>
-    <div class="modal-header">
-      <h4 class="modal-title"> Congratulations, you take home {{points}} SUPER POINTS! </h4>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-success" (click)="modal.close()" > OK </button>
-    </div>
-  </ng-template>
+</div>
 
-  <ng-template #modalLoser let-modal>
-    <div class="modal-header">
-      <h4 class="modal-title"> Thanks for playing, in the next one you will do better, you will take {{points}} points </h4>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-success" (click)="modal.close()" > OK </button>
-    </div>
-  </ng-template>
+<div class="container-color " *ngIf="screenNickname">
+  <div class="container d-flex justify-content-center min-vh-100"  > 
+    <div class="row d-flex justify-content-center align-items-center" ><br><br>
+        <div class="col-sm-8 col-sm-offset-2">
 
+                <div id="quiz">
+                    
+                    <div class="question">
+                        <h3><span class="label label-warning" id="qid"></span>
+                            <span id="question"> Enter your nickname: </span>
+                        </h3>
+                    </div>
+                    
+                    <ul>
+                      <li class="finalQ"  style="height: 100px;">
+                            <label  for="f-option" class="element-animation">
+                              <input style="margin-right: 350px; width: 280px;" class="form-control" type="text" placeholder="Nickname">
+                            </label>
+                      </li>  
+                    </ul>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
 
 </div>
- -->
- <div class="container d-flex justify-content-center min-vh-100" *ngIf="questionsArray.length !== 0" > 
-  <div class="row d-flex justify-content-center align-items-center"><br><br>
-      <div class="col-sm-8 col-sm-offset-2">
 
-        <h3 class="text-center">Question N°: {{ acc }} / {{ questionsNumMax }} | Points: {{ points }}</h3>
-        <br>
-        <br>
-          
-          <div class="loader">
 
-            
-            
 
-              <div id="quiz">
-                  
-                  <div class="question">
-                      <h3><span class="label label-warning" id="qid"></span>
-                          <span id="question"> {{questionsArray[0].question}} </span>
-                      </h3>
-                  </div>
-                  
-                  <ul>
-                    <li>
-                      <input (change)="onCorrectAnswer($event, arrayAux[0] )" type="radio" id="f-option" name="selector" value="1">
-                          <label  for="f-option" class="element-animation">{{arrayAux[0]}}</label>
-                          <div class="check"><div class="inside"></div></div>
-                    </li>
-                    
-                    <li>
-                      <input (click)="onCorrectAnswer($event, arrayAux[1])" type="radio" id="s-option" name="selector" value="2">
-                      <label  for="s-option" class="element-animation">{{arrayAux[1]}}</label>
-                      <div class="check"><div class="inside"></div></div>
-                    </li>
-                    
-                    <li>
-                      <input (click)="onCorrectAnswer($event, arrayAux[2])" type="radio" id="t-option" name="selector" value="3">
-                      <label for="t-option" class="element-animation">{{arrayAux[2]}}</label>
-                      <div class="check"><div class="inside"></div></div>
-                    </li>
 
-                    <li class="finalQ">
-                      <input (click)="onCorrectAnswer($event, arrayAux[3])" type="radio" id="z-option" name="selector" value="4">
-                      <label  for="z-option" class="element-animation"> {{arrayAux[3]}} </label>
-                      <div class="check"><div class="inside"></div></div>
-                    </li>
-
-                  </ul>
-
-              </div>
-          </div>
-          
-      </div>
-  </div>
-</div>

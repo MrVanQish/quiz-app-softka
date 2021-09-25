@@ -20,7 +20,7 @@ export class DbService {
 
   public addScore(data: Score): Observable <Score>{
 
-    return this.http.post<Score>(this.ApiURL, {data});
+    return this.http.post<Score>(this.ApiURL, data);
 
   }
 

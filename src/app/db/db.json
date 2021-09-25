@@ -6,6 +6,594 @@
       "nickname": "jacobo",
       "correctAsnwers": 1,
       "hitPercentage": "20%"
+    },
+    {
+      "points": 0,
+      "nickname": "jacobo",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 2
+    },
+    {
+      "points": 0,
+      "nickname": "jacobo",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 2
+    },
+    {
+      "points": 0,
+      "nickname": "jacobo",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 2
+    },
+    {
+      "points": 0,
+      "nickname": "jacobo",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 2
+    },
+    {
+      "points": 0,
+      "nickname": "jacobo",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 2
+    },
+    {
+      "points": 0,
+      "nickname": "jacobo",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 2
+    },
+    {
+      "points": 0,
+      "nickname": "jacobo",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 2
+    },
+    {
+      "points": 0,
+      "nickname": "jacobo",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 2
+    },
+    {
+      "points": 0,
+      "nickname": "jacobo",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 2
+    },
+    {
+      "points": 0,
+      "nickname": "jacobo",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 2
+    },
+    {
+      "points": 0,
+      "nickname": "jacobo",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 2
+    },
+    {
+      "points": 0,
+      "nickname": "jacobo",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 2
+    },
+    {
+      "points": 0,
+      "nickname": "jacobo",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 2
+    },
+    {
+      "points": 0,
+      "nickname": "jacobo",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 2
+    },
+    {
+      "points": 0,
+      "nickname": "jacobo",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 2
+    },
+    {
+      "points": 0,
+      "nickname": "jacobo",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 2
+    },
+    {
+      "points": 30,
+      "nickname": "jacobo",
+      "correctAsnwers": 3,
+      "hitPercentage": "60%",
+      "id": 3
+    },
+    {
+      "points": 0,
+      "nickname": "jacobo",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 4
+    },
+    {
+      "points": 20,
+      "nickname": "jacobo",
+      "correctAsnwers": 2,
+      "hitPercentage": "40%",
+      "id": 5
+    },
+    {
+      "points": 0,
+      "nickname": "ajjajdjedjejd",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 6
+    },
+    {
+      "points": 10,
+      "nickname": "gano full!!!!!!",
+      "correctAsnwers": 1,
+      "hitPercentage": "20%",
+      "id": 7
+    },
+    {
+      "points": 20,
+      "nickname": "gano full!!!!!!",
+      "correctAsnwers": 2,
+      "hitPercentage": "40%",
+      "id": 8
+    },
+    {
+      "points": 30,
+      "nickname": "gano full!!!!!!",
+      "correctAsnwers": 3,
+      "hitPercentage": "60%",
+      "id": 9
+    },
+    {
+      "points": 40,
+      "nickname": "gano full!!!!!!",
+      "correctAsnwers": 4,
+      "hitPercentage": "80%",
+      "id": 10
+    },
+    {
+      "points": 0,
+      "nickname": "ajjajdjedjejd",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 11
+    },
+    {
+      "points": 0,
+      "nickname": "Toreto",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 11
+    },
+    {
+      "points": 10,
+      "nickname": "gano full!!!!!!",
+      "correctAsnwers": 1,
+      "hitPercentage": "20%",
+      "id": 12
+    },
+    {
+      "points": 20,
+      "nickname": "gano full!!!!!!",
+      "correctAsnwers": 2,
+      "hitPercentage": "40%",
+      "id": 13
+    },
+    {
+      "points": 30,
+      "nickname": "gano full!!!!!!",
+      "correctAsnwers": 3,
+      "hitPercentage": "60%",
+      "id": 14
+    },
+    {
+      "points": 40,
+      "nickname": "gano full!!!!!!",
+      "correctAsnwers": 4,
+      "hitPercentage": "80%",
+      "id": 15
+    },
+    {
+      "points": 10,
+      "nickname": "gano full!!!!!!",
+      "correctAsnwers": 1,
+      "hitPercentage": "20%",
+      "id": 16
+    },
+    {
+      "points": 20,
+      "nickname": "gano full!!!!!!",
+      "correctAsnwers": 2,
+      "hitPercentage": "40%",
+      "id": 17
+    },
+    {
+      "points": 30,
+      "nickname": "gano full!!!!!!",
+      "correctAsnwers": 3,
+      "hitPercentage": "60%",
+      "id": 18
+    },
+    {
+      "points": 40,
+      "nickname": "gano full!!!!!!",
+      "correctAsnwers": 4,
+      "hitPercentage": "80%",
+      "id": 19
+    },
+    {
+      "points": 0,
+      "nickname": "ajjajdjedjejd",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 20
+    },
+    {
+      "points": 10,
+      "nickname": "gano full!!!!!!",
+      "correctAsnwers": 1,
+      "hitPercentage": "20%",
+      "id": 21
+    },
+    {
+      "points": 20,
+      "nickname": "gano full!!!!!!",
+      "correctAsnwers": 2,
+      "hitPercentage": "40%",
+      "id": 22
+    },
+    {
+      "points": 30,
+      "nickname": "gano full!!!!!!",
+      "correctAsnwers": 3,
+      "hitPercentage": "60%",
+      "id": 23
+    },
+    {
+      "points": 40,
+      "nickname": "gano full!!!!!!",
+      "correctAsnwers": 4,
+      "hitPercentage": "80%",
+      "id": 24
+    },
+    {
+      "points": 10,
+      "nickname": "gano full!!!!!!",
+      "correctAsnwers": 1,
+      "hitPercentage": "20%",
+      "id": 25
+    },
+    {
+      "points": 20,
+      "nickname": "gano full!!!!!!",
+      "correctAsnwers": 2,
+      "hitPercentage": "40%",
+      "id": 26
+    },
+    {
+      "points": 30,
+      "nickname": "gano full!!!!!!",
+      "correctAsnwers": 3,
+      "hitPercentage": "60%",
+      "id": 27
+    },
+    {
+      "points": 40,
+      "nickname": "gano full!!!!!!",
+      "correctAsnwers": 4,
+      "hitPercentage": "80%",
+      "id": 28
+    },
+    {
+      "points": 10,
+      "nickname": "gano full!!!!!!",
+      "correctAsnwers": 1,
+      "hitPercentage": "20%",
+      "id": 29
+    },
+    {
+      "points": 20,
+      "nickname": "gano full!!!!!!",
+      "correctAsnwers": 2,
+      "hitPercentage": "40%",
+      "id": 30
+    },
+    {
+      "points": 30,
+      "nickname": "gano full!!!!!!",
+      "correctAsnwers": 3,
+      "hitPercentage": "60%",
+      "id": 31
+    },
+    {
+      "points": 40,
+      "nickname": "gano full!!!!!!",
+      "correctAsnwers": 4,
+      "hitPercentage": "80%",
+      "id": 32
+    },
+    {
+      "points": 50,
+      "nickname": "jacobo",
+      "correctAsnwers": 5,
+      "hitPercentage": "100%",
+      "id": 33
+    },
+    {
+      "points": 20,
+      "nickname": "ajjajdjedjejd",
+      "correctAsnwers": 2,
+      "hitPercentage": "40%",
+      "id": 34
+    },
+    {
+      "points": 50,
+      "nickname": "ajjajdjedjejd",
+      "correctAsnwers": 5,
+      "hitPercentage": "100%",
+      "id": 35
+    },
+    {
+      "points": 0,
+      "nickname": "ajjajdjedjejd",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 36
+    },
+    {
+      "points": 0,
+      "nickname": "ajjajdjedjejd",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 37
+    },
+    {
+      "points": 0,
+      "nickname": "ajjajdjedjejd",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 38
+    },
+    {
+      "points": 0,
+      "nickname": "ajjajdjedjejd",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 39
+    },
+    {
+      "points": 0,
+      "nickname": "ajjajdjedjejd",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 40
+    },
+    {
+      "points": 0,
+      "nickname": "ajjajdjedjejd",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 41
+    },
+    {
+      "points": 0,
+      "nickname": "xd",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 42
+    },
+    {
+      "points": 50,
+      "nickname": "VanQish",
+      "correctAsnwers": 50,
+      "hitPercentage": "1000%",
+      "id": 43
+    },
+    {
+      "points": 50,
+      "nickname": "PEPE",
+      "correctAsnwers": 50,
+      "hitPercentage": "1000%",
+      "id": 44
+    },
+    {
+      "points": 0,
+      "nickname": "Jacvbfrerf",
+      "correctAsnwers": 1,
+      "hitPercentage": "20%",
+      "id": 45
+    },
+    {
+      "points": 0,
+      "nickname": "loser",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 46
+    },
+    {
+      "points": 50,
+      "nickname": "winner",
+      "correctAsnwers": 5,
+      "hitPercentage": "100%",
+      "id": 47
+    },
+    {
+      "points": 0,
+      "nickname": "loser",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 48
+    },
+    {
+      "points": 0,
+      "nickname": "loser",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 49
+    },
+    {
+      "points": 0,
+      "nickname": "loser",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 50
+    },
+    {
+      "points": 0,
+      "nickname": "loser",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 51
+    },
+    {
+      "points": 0,
+      "nickname": "loser",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 52
+    },
+    {
+      "points": 0,
+      "nickname": "loser",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 53
+    },
+    {
+      "points": 0,
+      "nickname": "loser",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 54
+    },
+    {
+      "points": 0,
+      "nickname": "loser",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 55
+    },
+    {
+      "points": 0,
+      "nickname": "loser",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 56
+    },
+    {
+      "points": 0,
+      "nickname": "loser",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 57
+    },
+    {
+      "points": 0,
+      "nickname": "loser",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 58
+    },
+    {
+      "points": 0,
+      "nickname": "loser",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 59
+    },
+    {
+      "points": 0,
+      "nickname": "loser",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 60
+    },
+    {
+      "points": 0,
+      "nickname": "loser",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 61
+    },
+    {
+      "points": 0,
+      "nickname": "loser",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 62
+    },
+    {
+      "points": 0,
+      "nickname": "loser",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 63
+    },
+    {
+      "points": 0,
+      "nickname": "loser",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 64
+    },
+    {
+      "points": 0,
+      "nickname": "loser",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 65
+    },
+    {
+      "points": 0,
+      "nickname": "loser",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 66
+    },
+    {
+      "points": 0,
+      "nickname": "loser",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 67
+    },
+    {
+      "points": 0,
+      "nickname": "loser",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 68
+    },
+    {
+      "points": 0,
+      "nickname": "loser",
+      "correctAsnwers": 0,
+      "hitPercentage": "0%",
+      "id": 69
     }
   ]
 }
